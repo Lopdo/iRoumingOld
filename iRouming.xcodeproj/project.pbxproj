@@ -15,6 +15,14 @@
 		F403F7B51BFCD832002B7023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F403F7B31BFCD832002B7023 /* LaunchScreen.storyboard */; };
 		F403F7C01BFCD833002B7023 /* iRoumingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403F7BF1BFCD833002B7023 /* iRoumingTests.swift */; };
 		F403F7CB1BFCD833002B7023 /* iRoumingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403F7CA1BFCD833002B7023 /* iRoumingUITests.swift */; };
+		F403F7EA1BFCDA9C002B7023 /* Icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = F403F7DE1BFCDA9C002B7023 /* Icon512.png */; };
+		F403F7EC1BFCDA9C002B7023 /* iRoumingSharerSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E01BFCDA9C002B7023 /* iRoumingSharerSettings.plist */; };
+		F403F7ED1BFCDA9C002B7023 /* Titillium-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E11BFCDA9C002B7023 /* Titillium-Light.otf */; };
+		F403F7EE1BFCDA9C002B7023 /* Titillium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E21BFCDA9C002B7023 /* Titillium-Regular.otf */; };
+		F403F7EF1BFCDA9C002B7023 /* Titillium-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E31BFCDA9C002B7023 /* Titillium-Semibold.otf */; };
+		F403F7F01BFCDA9C002B7023 /* Titillium-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E41BFCDA9C002B7023 /* Titillium-Thin.otf */; };
+		F403F7F11BFCDA9C002B7023 /* Titillium-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E51BFCDA9C002B7023 /* Titillium-ThinItalic.otf */; };
+		F403F7F21BFCDA9C002B7023 /* youtubeEmbed.html in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E61BFCDA9C002B7023 /* youtubeEmbed.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		F403F7C61BFCD833002B7023 /* iRoumingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRoumingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F403F7CA1BFCD833002B7023 /* iRoumingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRoumingUITests.swift; sourceTree = "<group>"; };
 		F403F7CC1BFCD833002B7023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F403F7DE1BFCDA9C002B7023 /* Icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon512.png; sourceTree = "<group>"; };
+		F403F7E01BFCDA9C002B7023 /* iRoumingSharerSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iRoumingSharerSettings.plist; sourceTree = "<group>"; };
+		F403F7E11BFCDA9C002B7023 /* Titillium-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-Light.otf"; sourceTree = "<group>"; };
+		F403F7E21BFCDA9C002B7023 /* Titillium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-Regular.otf"; sourceTree = "<group>"; };
+		F403F7E31BFCDA9C002B7023 /* Titillium-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-Semibold.otf"; sourceTree = "<group>"; };
+		F403F7E41BFCDA9C002B7023 /* Titillium-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-Thin.otf"; sourceTree = "<group>"; };
+		F403F7E51BFCDA9C002B7023 /* Titillium-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-ThinItalic.otf"; sourceTree = "<group>"; };
+		F403F7E61BFCDA9C002B7023 /* youtubeEmbed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = youtubeEmbed.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,7 @@
 		F403F7A71BFCD832002B7023 /* iRouming */ = {
 			isa = PBXGroup;
 			children = (
+				F403F7DA1BFCDA9C002B7023 /* Resources */,
 				F403F7A81BFCD832002B7023 /* AppDelegate.swift */,
 				F403F7AA1BFCD832002B7023 /* FirstViewController.swift */,
 				F403F7AC1BFCD832002B7023 /* SecondViewController.swift */,
@@ -126,6 +143,21 @@
 				F403F7CC1BFCD833002B7023 /* Info.plist */,
 			);
 			path = iRoumingUITests;
+			sourceTree = "<group>";
+		};
+		F403F7DA1BFCDA9C002B7023 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F403F7DE1BFCDA9C002B7023 /* Icon512.png */,
+				F403F7E01BFCDA9C002B7023 /* iRoumingSharerSettings.plist */,
+				F403F7E11BFCDA9C002B7023 /* Titillium-Light.otf */,
+				F403F7E21BFCDA9C002B7023 /* Titillium-Regular.otf */,
+				F403F7E31BFCDA9C002B7023 /* Titillium-Semibold.otf */,
+				F403F7E41BFCDA9C002B7023 /* Titillium-Thin.otf */,
+				F403F7E51BFCDA9C002B7023 /* Titillium-ThinItalic.otf */,
+				F403F7E61BFCDA9C002B7023 /* youtubeEmbed.html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +264,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F403F7F21BFCDA9C002B7023 /* youtubeEmbed.html in Resources */,
+				F403F7F11BFCDA9C002B7023 /* Titillium-ThinItalic.otf in Resources */,
+				F403F7F01BFCDA9C002B7023 /* Titillium-Thin.otf in Resources */,
+				F403F7EE1BFCDA9C002B7023 /* Titillium-Regular.otf in Resources */,
+				F403F7ED1BFCDA9C002B7023 /* Titillium-Light.otf in Resources */,
 				F403F7B51BFCD832002B7023 /* LaunchScreen.storyboard in Resources */,
+				F403F7EA1BFCDA9C002B7023 /* Icon512.png in Resources */,
+				F403F7EF1BFCDA9C002B7023 /* Titillium-Semibold.otf in Resources */,
 				F403F7B21BFCD832002B7023 /* Assets.xcassets in Resources */,
+				F403F7EC1BFCDA9C002B7023 /* iRoumingSharerSettings.plist in Resources */,
 				F403F7B01BFCD832002B7023 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

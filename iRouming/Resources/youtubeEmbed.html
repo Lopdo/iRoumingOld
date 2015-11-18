@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>body{margin:0px 0px 0px 0px; background:#252525; }</style>
+	</head>
+	<body>
+		<div id="player"></div>
+		<script>
+			var tag = document.createElement('script');
+			tag.src = 'http://www.youtube.com/player_api';
+			
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			firstScriptTag.requestFullScreen();
+			var ytplayer = null;
+			
+			function onYouTubePlayerAPIReady()
+			{
+				ytplayer = new YT.Player(
+										 'player',
+										 {
+										 videoId:'%@',
+										 width:'%0.0f',
+										 height:'%0.0f', %@
+										 playerVars:
+										 {
+										 'controls': %d,
+										 'playsinline' : 0,
+										 'rel':0,
+										 'showinfo':0
+										 },
+										 });
+			}
+		
+		
+		function onPlayerReady(event)
+		{
+			event.target.playVideo();
+		}
+		
+		function stopVideo()
+		{
+			if (ytplayer)
+			{
+				ytplayer.stopVideo();
+				ytplayer.clearVideo();
+			}
+			return 'STOPPED';
+		}
+		
+		function playVideo()
+		{
+			if (ytplayer)
+			{
+				ytplayer.playVideo();
+			}
+			return 'PLAY';
+		}
+		
+		function pauseVideo()
+		{
+			if (ytplayer)
+			{
+				ytplayer.pauseVideo();
+				ytplayer.clearVideo();
+			}
+			return 'PAUSED';
+		}
+		
+		function getPlayerState()
+		{
+			return ytplayer.getPlayerState();
+		}
+		
+		function isPlaying()
+		{
+			return (myPlayerState == YT.PlayerState.PLAYING);
+		}
+		function isPaused()
+		{
+			return (myPlayerState == YT.PlayerState.PAUSED);
+		}
+		function onPlayerError(event)
+		{
+			alert("Error");
+		}
+		</script>
+	</body>
+</html>
