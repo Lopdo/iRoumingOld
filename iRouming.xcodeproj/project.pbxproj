@@ -24,6 +24,14 @@
 		F403F7F01BFCDA9C002B7023 /* Titillium-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E41BFCDA9C002B7023 /* Titillium-Thin.otf */; };
 		F403F7F11BFCDA9C002B7023 /* Titillium-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E51BFCDA9C002B7023 /* Titillium-ThinItalic.otf */; };
 		F403F7F21BFCDA9C002B7023 /* youtubeEmbed.html in Resources */ = {isa = PBXBuildFile; fileRef = F403F7E61BFCDA9C002B7023 /* youtubeEmbed.html */; };
+		F43C66D01BFD01810038BD3C /* FunnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66CF1BFD01810038BD3C /* FunnyObject.swift */; };
+		F43C66D21BFD02820038BD3C /* CommentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66D11BFD02820038BD3C /* CommentObject.swift */; };
+		F43C66D41BFD23A30038BD3C /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66D31BFD23A30038BD3C /* ImageObject.swift */; };
+		F43C66D61BFD28620038BD3C /* JokeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66D51BFD28610038BD3C /* JokeObject.swift */; };
+		F43C66D81BFD29280038BD3C /* VideoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66D71BFD29280038BD3C /* VideoObject.swift */; };
+		F43C66DA1BFD2B290038BD3C /* GifObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66D91BFD2B290038BD3C /* GifObject.swift */; };
+		F43C66DC1BFD2FC00038BD3C /* ForumPostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66DB1BFD2FC00038BD3C /* ForumPostObject.swift */; };
+		F43C66DE1BFD37D90038BD3C /* ForumThreadObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66DD1BFD37D90038BD3C /* ForumThreadObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,14 @@
 		F403F7E41BFCDA9C002B7023 /* Titillium-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-Thin.otf"; sourceTree = "<group>"; };
 		F403F7E51BFCDA9C002B7023 /* Titillium-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Titillium-ThinItalic.otf"; sourceTree = "<group>"; };
 		F403F7E61BFCDA9C002B7023 /* youtubeEmbed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = youtubeEmbed.html; sourceTree = "<group>"; };
+		F43C66CF1BFD01810038BD3C /* FunnyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunnyObject.swift; path = Model/FunnyObject.swift; sourceTree = "<group>"; };
+		F43C66D11BFD02820038BD3C /* CommentObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentObject.swift; path = Model/CommentObject.swift; sourceTree = "<group>"; };
+		F43C66D31BFD23A30038BD3C /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageObject.swift; path = Model/ImageObject.swift; sourceTree = "<group>"; };
+		F43C66D51BFD28610038BD3C /* JokeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeObject.swift; path = Model/JokeObject.swift; sourceTree = "<group>"; };
+		F43C66D71BFD29280038BD3C /* VideoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoObject.swift; path = Model/VideoObject.swift; sourceTree = "<group>"; };
+		F43C66D91BFD2B290038BD3C /* GifObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifObject.swift; path = Model/GifObject.swift; sourceTree = "<group>"; };
+		F43C66DB1BFD2FC00038BD3C /* ForumPostObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumPostObject.swift; path = Model/ForumPostObject.swift; sourceTree = "<group>"; };
+		F43C66DD1BFD37D90038BD3C /* ForumThreadObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumThreadObject.swift; path = Model/ForumThreadObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +155,7 @@
 		F403F7A71BFCD832002B7023 /* iRouming */ = {
 			isa = PBXGroup;
 			children = (
+				F43C66CD1BFD011B0038BD3C /* Model */,
 				F403F7DA1BFCDA9C002B7023 /* Resources */,
 				F403F7A81BFCD832002B7023 /* AppDelegate.swift */,
 				F403F7AA1BFCD832002B7023 /* FirstViewController.swift */,
@@ -182,6 +199,21 @@
 				F403F7E61BFCDA9C002B7023 /* youtubeEmbed.html */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F43C66CD1BFD011B0038BD3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F43C66D11BFD02820038BD3C /* CommentObject.swift */,
+				F43C66CF1BFD01810038BD3C /* FunnyObject.swift */,
+				F43C66D31BFD23A30038BD3C /* ImageObject.swift */,
+				F43C66D51BFD28610038BD3C /* JokeObject.swift */,
+				F43C66D71BFD29280038BD3C /* VideoObject.swift */,
+				F43C66D91BFD2B290038BD3C /* GifObject.swift */,
+				F43C66DB1BFD2FC00038BD3C /* ForumPostObject.swift */,
+				F43C66DD1BFD37D90038BD3C /* ForumThreadObject.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,9 +406,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43C66DE1BFD37D90038BD3C /* ForumThreadObject.swift in Sources */,
+				F43C66D41BFD23A30038BD3C /* ImageObject.swift in Sources */,
 				F403F7AD1BFCD832002B7023 /* SecondViewController.swift in Sources */,
+				F43C66D81BFD29280038BD3C /* VideoObject.swift in Sources */,
+				F43C66D21BFD02820038BD3C /* CommentObject.swift in Sources */,
+				F43C66DC1BFD2FC00038BD3C /* ForumPostObject.swift in Sources */,
 				F403F7A91BFCD832002B7023 /* AppDelegate.swift in Sources */,
 				F403F7AB1BFCD832002B7023 /* FirstViewController.swift in Sources */,
+				F43C66D61BFD28620038BD3C /* JokeObject.swift in Sources */,
+				F43C66D01BFD01810038BD3C /* FunnyObject.swift in Sources */,
+				F43C66DA1BFD2B290038BD3C /* GifObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
