@@ -1,0 +1,6 @@
+framework module Pods_iRouming {
+  umbrella header "Pods-iRouming-umbrella.h"
+
+  export *
+  module * { export * }
+}
