@@ -222,7 +222,7 @@
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-eb-yES">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-qw-Gq9" customClass="CommentsButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-qw-Gq9" customClass="CommentsButton" customModule="iRouming" customModuleProvider="target">
                                         <rect key="frame" x="266" y="0.0" width="44" height="44"/>
                                         <animations/>
                                         <constraints>
@@ -509,7 +509,7 @@
         <!--Vtipník-->
         <scene sceneID="KxS-gJ-SJc">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Umb-z2-Se3" customClass="JokesViewController" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Umb-z2-Se3" customClass="JokesViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="YVd-8L-dFG">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -683,7 +683,7 @@
         <!--Videjník-->
         <scene sceneID="Hk8-Ye-n5m">
             <objects>
-                <viewController id="Rd4-Y9-d2e" customClass="VideosViewController" sceneMemberID="viewController">
+                <viewController id="Rd4-Y9-d2e" customClass="VideosViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xQ9-YS-B8Z"/>
                         <viewControllerLayoutGuide type="bottom" id="fa3-uN-36F"/>
@@ -730,7 +730,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-0v-9u3" customClass="CommentsButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0d-0v-9u3" customClass="CommentsButton" customModule="iRouming" customModuleProvider="target">
                                                 <rect key="frame" x="276" y="0.0" width="44" height="44"/>
                                                 <animations/>
                                                 <constraints>
@@ -1168,7 +1168,7 @@
         <!--Gifník-->
         <scene sceneID="VjZ-HZ-Hbm">
             <objects>
-                <viewController id="aSf-86-8Wr" customClass="GifsViewController" sceneMemberID="viewController">
+                <viewController id="aSf-86-8Wr" customClass="GifsViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sef-pD-yan"/>
                         <viewControllerLayoutGuide type="bottom" id="pVg-xc-8ZT"/>
@@ -1205,7 +1205,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="x8g-za-nix"/>
                                                 </constraints>
                                             </activityIndicatorView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDW-Dn-Rf7" customClass="CommentsButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDW-Dn-Rf7" customClass="CommentsButton" customModule="iRouming" customModuleProvider="target">
                                                 <rect key="frame" x="276" y="0.0" width="44" height="44"/>
                                                 <animations/>
                                                 <constraints>
