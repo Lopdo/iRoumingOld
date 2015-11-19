@@ -3,3 +3,6 @@
 //
 
 #import <Google/Analytics.h>
+#import <ShareKit/ShareKit.h>
+#import <ShareKit/SHKConfiguration.h>
+#import <ShareKit/DefaultSHKConfigurator.h>

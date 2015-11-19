@@ -15,7 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+		var configureError:NSError?
+		GGLContext.sharedInstance().configureWithError(&configureError)
+		
+		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Titillium-Semibold", size: 16)!]
+		//UITabBar.appearance().selectedImageTintColor = UIColor(red: 1, green: 237.0 / 255.0, blue: 0, alpha: 1)
+		UITabBar.appearance().tintColor = UIColor(red: 1, green: 237.0 / 255.0, blue: 0, alpha: 1)
+		UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState: .Normal)
+		
+		let tabBar = (self.window!.rootViewController as! UITabBarController).tabBar
+		
+		for item in tabBar.items! {
+			item.image = item.image!.imageWithRenderingMode(.AlwaysOriginal)
+		}
+		
+		let configurator = CustomSHKConfigurator()
+		SHKConfiguration.sharedInstanceWithConfigurator(configurator)
+		
 		return true
 	}
 

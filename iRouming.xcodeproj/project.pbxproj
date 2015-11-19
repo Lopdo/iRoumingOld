@@ -60,6 +60,7 @@
 		F43C67201BFE01040038BD3C /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671F1BFE01040038BD3C /* CommentsButton.swift */; };
 		F43C67231BFE048C0038BD3C /* GANTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67221BFE048C0038BD3C /* GANTracker.swift */; };
 		F43C67251BFE05D80038BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */; };
+		F43C672B1BFE24B30038BD3C /* CustomSHKConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C672A1BFE24B30038BD3C /* CustomSHKConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		F43C67221BFE048C0038BD3C /* GANTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GANTracker.swift; path = utils/GANTracker.swift; sourceTree = "<group>"; };
 		F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F43C67261BFE06C90038BD3C /* iRouming-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRouming-Bridging-Header.h"; sourceTree = "<group>"; };
+		F43C672A1BFE24B30038BD3C /* CustomSHKConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSHKConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				F403F7B61BFCD832002B7023 /* Info.plist */,
 				F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */,
 				F43C67261BFE06C90038BD3C /* iRouming-Bridging-Header.h */,
+				F43C672A1BFE24B30038BD3C /* CustomSHKConfigurator.swift */,
 			);
 			path = iRouming;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				F43C66ED1BFDF1130038BD3C /* ImagesViewController.swift in Sources */,
 				F43C66EF1BFDF12B0038BD3C /* ImagesCell.swift in Sources */,
 				F43C66F41BFDF1F40038BD3C /* CommentableViewController.swift in Sources */,
+				F43C672B1BFE24B30038BD3C /* CustomSHKConfigurator.swift in Sources */,
 				F43C66DE1BFD37D90038BD3C /* ForumThreadObject.swift in Sources */,
 				F43C67091BFDF33F0038BD3C /* GifCell.swift in Sources */,
 				F43C66F21BFDF1DD0038BD3C /* CommentsViewController.swift in Sources */,
@@ -693,11 +697,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -731,9 +737,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -744,6 +752,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Google/Headers",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+					"${PODS_ROOT}/**",
+				);
 				INFOPLIST_FILE = iRouming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -760,6 +781,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Google/Headers",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+					"${PODS_ROOT}/**",
+				);
 				INFOPLIST_FILE = iRouming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
