@@ -61,6 +61,7 @@
 		F43C67231BFE048C0038BD3C /* GANTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67221BFE048C0038BD3C /* GANTracker.swift */; };
 		F43C67251BFE05D80038BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */; };
 		F43C672B1BFE24B30038BD3C /* CustomSHKConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C672A1BFE24B30038BD3C /* CustomSHKConfigurator.swift */; };
+		F43C672D1BFE3D670038BD3C /* UIImageView+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C672C1BFE3D670038BD3C /* UIImageView+Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F43C67261BFE06C90038BD3C /* iRouming-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRouming-Bridging-Header.h"; sourceTree = "<group>"; };
 		F43C672A1BFE24B30038BD3C /* CustomSHKConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSHKConfigurator.swift; sourceTree = "<group>"; };
+		F43C672C1BFE3D670038BD3C /* UIImageView+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Alamofire.swift"; path = "utils/UIImageView+Alamofire.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				F43C67221BFE048C0038BD3C /* GANTracker.swift */,
+				F43C672C1BFE3D670038BD3C /* UIImageView+Alamofire.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				F43C66ED1BFDF1130038BD3C /* ImagesViewController.swift in Sources */,
 				F43C66EF1BFDF12B0038BD3C /* ImagesCell.swift in Sources */,
 				F43C66F41BFDF1F40038BD3C /* CommentableViewController.swift in Sources */,
+				F43C672D1BFE3D670038BD3C /* UIImageView+Alamofire.swift in Sources */,
 				F43C672B1BFE24B30038BD3C /* CustomSHKConfigurator.swift in Sources */,
 				F43C66DE1BFD37D90038BD3C /* ForumThreadObject.swift in Sources */,
 				F43C67091BFDF33F0038BD3C /* GifCell.swift in Sources */,
