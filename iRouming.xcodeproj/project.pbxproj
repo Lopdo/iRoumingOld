@@ -58,6 +58,8 @@
 		F43C671C1BFE00C50038BD3C /* GalleryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671B1BFE00C50038BD3C /* GalleryLabel.swift */; };
 		F43C671E1BFE00EC0038BD3C /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671D1BFE00EC0038BD3C /* GalleryCell.swift */; };
 		F43C67201BFE01040038BD3C /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671F1BFE01040038BD3C /* CommentsButton.swift */; };
+		F43C67231BFE048C0038BD3C /* GANTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67221BFE048C0038BD3C /* GANTracker.swift */; };
+		F43C67251BFE05D80038BD3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,9 @@
 		F43C671B1BFE00C50038BD3C /* GalleryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryLabel.swift; path = Gallery/GalleryLabel.swift; sourceTree = "<group>"; };
 		F43C671D1BFE00EC0038BD3C /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryCell.swift; path = Gallery/GalleryCell.swift; sourceTree = "<group>"; };
 		F43C671F1BFE01040038BD3C /* CommentsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsButton.swift; path = Gallery/CommentsButton.swift; sourceTree = "<group>"; };
+		F43C67221BFE048C0038BD3C /* GANTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GANTracker.swift; path = utils/GANTracker.swift; sourceTree = "<group>"; };
+		F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F43C67261BFE06C90038BD3C /* iRouming-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iRouming-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +212,7 @@
 		F403F7A71BFCD832002B7023 /* iRouming */ = {
 			isa = PBXGroup;
 			children = (
+				F43C67211BFE04720038BD3C /* utils */,
 				F43C66CD1BFD011B0038BD3C /* Model */,
 				F403F7DA1BFCDA9C002B7023 /* Resources */,
 				F43C66EB1BFDF0DD0038BD3C /* ImagesScreen */,
@@ -222,6 +228,8 @@
 				F403F7B11BFCD832002B7023 /* Assets.xcassets */,
 				F403F7B31BFCD832002B7023 /* LaunchScreen.storyboard */,
 				F403F7B61BFCD832002B7023 /* Info.plist */,
+				F43C67241BFE05D80038BD3C /* GoogleService-Info.plist */,
+				F43C67261BFE06C90038BD3C /* iRouming-Bridging-Header.h */,
 			);
 			path = iRouming;
 			sourceTree = "<group>";
@@ -358,6 +366,14 @@
 			name = Gallery;
 			sourceTree = "<group>";
 		};
+		F43C67211BFE04720038BD3C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F43C67221BFE048C0038BD3C /* GANTracker.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +486,7 @@
 				F403F7F01BFCDA9C002B7023 /* Titillium-Thin.otf in Resources */,
 				F403F7EE1BFCDA9C002B7023 /* Titillium-Regular.otf in Resources */,
 				F403F7ED1BFCDA9C002B7023 /* Titillium-Light.otf in Resources */,
+				F43C67251BFE05D80038BD3C /* GoogleService-Info.plist in Resources */,
 				F403F7B51BFCD832002B7023 /* LaunchScreen.storyboard in Resources */,
 				F403F7EA1BFCDA9C002B7023 /* Icon512.png in Resources */,
 				F403F7EF1BFCDA9C002B7023 /* Titillium-Semibold.otf in Resources */,
@@ -583,6 +600,7 @@
 				F43C670E1BFDF39C0038BD3C /* ForumThreadsViewController.swift in Sources */,
 				F43C66DA1BFD2B290038BD3C /* GifObject.swift in Sources */,
 				F43C67001BFDF2C50038BD3C /* JokeCell.swift in Sources */,
+				F43C67231BFE048C0038BD3C /* GANTracker.swift in Sources */,
 				F43C67201BFE01040038BD3C /* CommentsButton.swift in Sources */,
 				F43C67071BFDF3280038BD3C /* GifsViewController.swift in Sources */,
 			);
@@ -725,11 +743,14 @@
 			baseConfigurationReference = 1D21169FDB49DA8B21885432 /* Pods-iRouming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iRouming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lb.iphone.iRouming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iRouming/iRouming-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -738,11 +759,13 @@
 			baseConfigurationReference = 4DDA7D10187AB5AE86B5FAF1 /* Pods-iRouming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iRouming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lb.iphone.iRouming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iRouming/iRouming-Bridging-Header.h";
 			};
 			name = Release;
 		};

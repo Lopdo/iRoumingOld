@@ -9,6 +9,22 @@ PODS:
   - Facebook-iOS-SDK (3.24.1):
     - Bolts (~> 1.2)
   - FLAnimatedImage (1.0.8)
+  - Google/Analytics (1.2.1):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (1.2.1):
+    - GoogleInterchangeUtilities (~> 1.0)
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.1)
+  - GoogleAnalytics (3.14.0)
+  - GoogleInterchangeUtilities (1.1.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleNetworkingUtilities (1.0.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.0.3)
+  - GoogleUtilities (1.1.0):
+    - GoogleSymbolUtilities (~> 1.0.0)
   - PKMultipartInputStream (1.1.0)
   - SAMTextView (0.2.2)
   - SDWebImage (3.7.3):
@@ -35,6 +51,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - FLAnimatedImage (~> 1.0)
+  - Google/Analytics
   - ShareKit/Facebook
   - ShareKit/Twitter
   - SWRevealViewController
@@ -44,6 +61,12 @@ SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
   Facebook-iOS-SDK: 08689c2690dc4e087b9c8e171e48667608b72a2a
   FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
+  Google: fd33b5fa40fa3aaee5176de49c873a74e3d11dce
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
+  GoogleInterchangeUtilities: d7f7174176fbcf9710f696f1acebad4dbd98ac03
+  GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
+  GoogleSymbolUtilities: 82ad9f93d3615244b3f4ce440f5ab2515e8b4f56
+  GoogleUtilities: 8ed9134debe11719097881711464752900668f10
   PKMultipartInputStream: 1fb466fac9347857e3477e4dfc6fcc62fea7a944
   SAMTextView: 979c43bb1fa5859ddfbfeb35e9c296a2b0ec55fd
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

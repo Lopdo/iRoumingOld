@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '29024269099C513161AF7CAE'
+               BlueprintIdentifier = '375D89A982A7823557D19B75'
                BlueprintName = 'ShareKit-ShareKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ShareKit.bundle'>
