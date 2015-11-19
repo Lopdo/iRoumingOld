@@ -155,7 +155,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="4Xd-BP-Rat">
                         <barButtonItem key="rightBarButtonItem" image="button_about" id="w5o-Wg-P5k">
                             <connections>
-                                <segue destination="tUq-E7-ZtL" kind="modal" identifier="Info" modalTransitionStyle="flipHorizontal" id="XoQ-Z7-gQJ"/>
+                                <segue destination="tUq-E7-ZtL" kind="modal" identifier="Info" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="XoQ-Z7-gQJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1003,7 +1003,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="lbPressed:" destination="tUq-E7-ZtL" eventType="touchUpInside" id="r3b-dQ-vZt"/>
+                                            <action selector="lbPressed:" destination="tUq-E7-ZtL" eventType="touchUpInside" id="xQE-xV-K5R"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1147,18 +1147,18 @@
                             <constraint firstItem="LX2-Ly-7Iw" firstAttribute="top" secondItem="VW4-or-zJq" secondAttribute="bottom" placeholder="YES" id="yp2-rO-zFc"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="QKj-w3-ca3"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="_viewJD" destination="5M6-vH-vd2" id="PBC-Ka-k9N"/>
-                        <outlet property="_viewLB" destination="LX2-Ly-7Iw" id="KDI-3i-WOf"/>
-                        <outlet property="_viewLSpacer" destination="njQ-xD-2Cs" id="f5F-l4-caL"/>
-                        <outlet property="_viewPSpacerBottom" destination="aIM-RC-dHg" id="94u-wj-Wd3"/>
-                        <outlet property="_viewPSpacerTop" destination="0JP-y2-QEB" id="1FB-5C-NNa"/>
-                        <outlet property="_viewRouming" destination="VW4-or-zJq" id="Bpy-tT-H7S"/>
+                        <outlet property="viewJD" destination="5M6-vH-vd2" id="bsj-pu-Abc"/>
+                        <outlet property="viewLB" destination="LX2-Ly-7Iw" id="JPg-2X-wDg"/>
+                        <outlet property="viewLSpacer" destination="njQ-xD-2Cs" id="2GT-NM-dzJ"/>
+                        <outlet property="viewPSpacerBottom" destination="aIM-RC-dHg" id="tfb-ef-svi"/>
+                        <outlet property="viewPSpacerTop" destination="0JP-y2-QEB" id="0iq-gP-L4T"/>
+                        <outlet property="viewRouming" destination="VW4-or-zJq" id="Zop-Bn-gD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjl-B6-8ZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1372,7 +1372,7 @@
         <!--Fórum-->
         <scene sceneID="T4D-1h-FCV">
             <objects>
-                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="rlN-PS-Gw6" customClass="ForumViewController" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="rlN-PS-Gw6" customClass="ForumViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="JdU-b7-QhA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1537,7 +1537,7 @@
         <!--Forum Threads View Controller-->
         <scene sceneID="XNz-fZ-uza">
             <objects>
-                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="pSW-ow-qLa" customClass="ForumThreadsViewController" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="pSW-ow-qLa" customClass="ForumThreadsViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="32" sectionHeaderHeight="22" sectionFooterHeight="22" id="req-FU-aRP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
