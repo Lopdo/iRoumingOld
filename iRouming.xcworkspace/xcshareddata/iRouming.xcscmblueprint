@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "656FEC61C5127E449DA4CF8209D0672491F6BD36",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "656FEC61C5127E449DA4CF8209D0672491F6BD36" : 0,
+    "7051F14DA5AB3C5BB35278E9884D39F5D7E67D50" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A7179548-A172-4DB7-AF53-32F612232BC1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "656FEC61C5127E449DA4CF8209D0672491F6BD36" : "iRouming2\/",
+    "7051F14DA5AB3C5BB35278E9884D39F5D7E67D50" : "iRouming\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iRouming",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iRouming.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lopdo\/iRouming.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "656FEC61C5127E449DA4CF8209D0672491F6BD36"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/angel.lost-bytes.com\/iOS_iRouming",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7051F14DA5AB3C5BB35278E9884D39F5D7E67D50"
+    }
+  ]
+}

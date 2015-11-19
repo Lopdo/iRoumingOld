@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E7B467A7D64CB0C815669B6E /* Pods_iRouming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91C9E61FD2A6B83EA682637 /* Pods_iRouming.framework */; };
 		F403F7A91BFCD832002B7023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403F7A81BFCD832002B7023 /* AppDelegate.swift */; };
-		F403F7AB1BFCD832002B7023 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403F7AA1BFCD832002B7023 /* FirstViewController.swift */; };
-		F403F7AD1BFCD832002B7023 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403F7AC1BFCD832002B7023 /* SecondViewController.swift */; };
 		F403F7B01BFCD832002B7023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F403F7AE1BFCD832002B7023 /* Main.storyboard */; };
 		F403F7B21BFCD832002B7023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F403F7B11BFCD832002B7023 /* Assets.xcassets */; };
 		F403F7B51BFCD832002B7023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F403F7B31BFCD832002B7023 /* LaunchScreen.storyboard */; };
@@ -37,6 +35,29 @@
 		F43C66E41BFDD38C0038BD3C /* VideosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66E31BFDD38C0038BD3C /* VideosManager.swift */; };
 		F43C66E61BFDD42C0038BD3C /* GifsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66E51BFDD42C0038BD3C /* GifsManager.swift */; };
 		F43C66E81BFDD4D50038BD3C /* ForumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66E71BFDD4D50038BD3C /* ForumManager.swift */; };
+		F43C66ED1BFDF1130038BD3C /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66EC1BFDF1130038BD3C /* ImagesViewController.swift */; };
+		F43C66EF1BFDF12B0038BD3C /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66EE1BFDF12B0038BD3C /* ImagesCell.swift */; };
+		F43C66F21BFDF1DD0038BD3C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66F11BFDF1DD0038BD3C /* CommentsViewController.swift */; };
+		F43C66F41BFDF1F40038BD3C /* CommentableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66F31BFDF1F40038BD3C /* CommentableViewController.swift */; };
+		F43C66F61BFDF20B0038BD3C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66F51BFDF20B0038BD3C /* CommentCell.swift */; };
+		F43C66F91BFDF25A0038BD3C /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66F81BFDF25A0038BD3C /* VideosViewController.swift */; };
+		F43C66FB1BFDF26A0038BD3C /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66FA1BFDF26A0038BD3C /* VideoCell.swift */; };
+		F43C66FE1BFDF2AF0038BD3C /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66FD1BFDF2AF0038BD3C /* JokesViewController.swift */; };
+		F43C67001BFDF2C50038BD3C /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C66FF1BFDF2C50038BD3C /* JokeCell.swift */; };
+		F43C67021BFDF2D30038BD3C /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67011BFDF2D30038BD3C /* LoadingCell.swift */; };
+		F43C67041BFDF2EC0038BD3C /* AutoWidthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67031BFDF2EC0038BD3C /* AutoWidthLabel.swift */; };
+		F43C67071BFDF3280038BD3C /* GifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67061BFDF3280038BD3C /* GifsViewController.swift */; };
+		F43C67091BFDF33F0038BD3C /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67081BFDF33F0038BD3C /* GifCell.swift */; };
+		F43C670C1BFDF36D0038BD3C /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C670B1BFDF36D0038BD3C /* ForumViewController.swift */; };
+		F43C670E1BFDF39C0038BD3C /* ForumThreadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C670D1BFDF39C0038BD3C /* ForumThreadsViewController.swift */; };
+		F43C67101BFDF3BC0038BD3C /* ForumPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C670F1BFDF3BC0038BD3C /* ForumPostCell.swift */; };
+		F43C67121BFDF3CF0038BD3C /* ForumThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67111BFDF3CF0038BD3C /* ForumThreadCell.swift */; };
+		F43C67151BFDF40A0038BD3C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67141BFDF40A0038BD3C /* AboutViewController.swift */; };
+		F43C67181BFE00890038BD3C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67171BFE00890038BD3C /* GalleryViewController.swift */; };
+		F43C671A1BFE00B30038BD3C /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C67191BFE00B30038BD3C /* ImageScrollView.swift */; };
+		F43C671C1BFE00C50038BD3C /* GalleryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671B1BFE00C50038BD3C /* GalleryLabel.swift */; };
+		F43C671E1BFE00EC0038BD3C /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671D1BFE00EC0038BD3C /* GalleryCell.swift */; };
+		F43C67201BFE01040038BD3C /* CommentsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C671F1BFE01040038BD3C /* CommentsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +83,6 @@
 		A91C9E61FD2A6B83EA682637 /* Pods_iRouming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRouming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F403F7A51BFCD832002B7023 /* iRouming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRouming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F403F7A81BFCD832002B7023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F403F7AA1BFCD832002B7023 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F403F7AC1BFCD832002B7023 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F403F7AF1BFCD832002B7023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F403F7B11BFCD832002B7023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F403F7B41BFCD832002B7023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +114,29 @@
 		F43C66E31BFDD38C0038BD3C /* VideosManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosManager.swift; path = Model/VideosManager.swift; sourceTree = "<group>"; };
 		F43C66E51BFDD42C0038BD3C /* GifsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifsManager.swift; path = Model/GifsManager.swift; sourceTree = "<group>"; };
 		F43C66E71BFDD4D50038BD3C /* ForumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumManager.swift; path = Model/ForumManager.swift; sourceTree = "<group>"; };
+		F43C66EC1BFDF1130038BD3C /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesViewController.swift; path = ImagesScreen/ImagesViewController.swift; sourceTree = "<group>"; };
+		F43C66EE1BFDF12B0038BD3C /* ImagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesCell.swift; path = ImagesScreen/ImagesCell.swift; sourceTree = "<group>"; };
+		F43C66F11BFDF1DD0038BD3C /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsViewController.swift; path = CommentsScreen/CommentsViewController.swift; sourceTree = "<group>"; };
+		F43C66F31BFDF1F40038BD3C /* CommentableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentableViewController.swift; path = CommentsScreen/CommentableViewController.swift; sourceTree = "<group>"; };
+		F43C66F51BFDF20B0038BD3C /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = CommentsScreen/CommentCell.swift; sourceTree = "<group>"; };
+		F43C66F81BFDF25A0038BD3C /* VideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideosViewController.swift; path = VideosScreen/VideosViewController.swift; sourceTree = "<group>"; };
+		F43C66FA1BFDF26A0038BD3C /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = VideosScreen/VideoCell.swift; sourceTree = "<group>"; };
+		F43C66FD1BFDF2AF0038BD3C /* JokesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokesViewController.swift; path = JokesScreen/JokesViewController.swift; sourceTree = "<group>"; };
+		F43C66FF1BFDF2C50038BD3C /* JokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeCell.swift; path = JokesScreen/JokeCell.swift; sourceTree = "<group>"; };
+		F43C67011BFDF2D30038BD3C /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingCell.swift; path = JokesScreen/LoadingCell.swift; sourceTree = "<group>"; };
+		F43C67031BFDF2EC0038BD3C /* AutoWidthLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoWidthLabel.swift; path = JokesScreen/AutoWidthLabel.swift; sourceTree = "<group>"; };
+		F43C67061BFDF3280038BD3C /* GifsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifsViewController.swift; path = GifsScreen/GifsViewController.swift; sourceTree = "<group>"; };
+		F43C67081BFDF33F0038BD3C /* GifCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifCell.swift; path = GifsScreen/GifCell.swift; sourceTree = "<group>"; };
+		F43C670B1BFDF36D0038BD3C /* ForumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumViewController.swift; path = ForumScreen/ForumViewController.swift; sourceTree = "<group>"; };
+		F43C670D1BFDF39C0038BD3C /* ForumThreadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumThreadsViewController.swift; path = ForumScreen/ForumThreadsViewController.swift; sourceTree = "<group>"; };
+		F43C670F1BFDF3BC0038BD3C /* ForumPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumPostCell.swift; path = ForumScreen/ForumPostCell.swift; sourceTree = "<group>"; };
+		F43C67111BFDF3CF0038BD3C /* ForumThreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumThreadCell.swift; path = ForumScreen/ForumThreadCell.swift; sourceTree = "<group>"; };
+		F43C67141BFDF40A0038BD3C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = AboutScreen/AboutViewController.swift; sourceTree = "<group>"; };
+		F43C67171BFE00890038BD3C /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryViewController.swift; path = Gallery/GalleryViewController.swift; sourceTree = "<group>"; };
+		F43C67191BFE00B30038BD3C /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageScrollView.swift; path = Gallery/ImageScrollView.swift; sourceTree = "<group>"; };
+		F43C671B1BFE00C50038BD3C /* GalleryLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryLabel.swift; path = Gallery/GalleryLabel.swift; sourceTree = "<group>"; };
+		F43C671D1BFE00EC0038BD3C /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryCell.swift; path = Gallery/GalleryCell.swift; sourceTree = "<group>"; };
+		F43C671F1BFE01040038BD3C /* CommentsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsButton.swift; path = Gallery/CommentsButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,9 +209,15 @@
 			children = (
 				F43C66CD1BFD011B0038BD3C /* Model */,
 				F403F7DA1BFCDA9C002B7023 /* Resources */,
+				F43C66EB1BFDF0DD0038BD3C /* ImagesScreen */,
+				F43C66F71BFDF22E0038BD3C /* VideosScreen */,
+				F43C66FC1BFDF2810038BD3C /* JokesScreen */,
+				F43C67051BFDF3000038BD3C /* GifsScreen */,
+				F43C670A1BFDF3480038BD3C /* ForumScreen */,
+				F43C67131BFDF3E30038BD3C /* About */,
+				F43C66F01BFDF1AB0038BD3C /* CommentsScreen */,
+				F43C67161BFE00380038BD3C /* Gallery */,
 				F403F7A81BFCD832002B7023 /* AppDelegate.swift */,
-				F403F7AA1BFCD832002B7023 /* FirstViewController.swift */,
-				F403F7AC1BFCD832002B7023 /* SecondViewController.swift */,
 				F403F7AE1BFCD832002B7023 /* Main.storyboard */,
 				F403F7B11BFCD832002B7023 /* Assets.xcassets */,
 				F403F7B31BFCD832002B7023 /* LaunchScreen.storyboard */,
@@ -229,6 +277,85 @@
 				F43C66E71BFDD4D50038BD3C /* ForumManager.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F43C66EB1BFDF0DD0038BD3C /* ImagesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F43C66EC1BFDF1130038BD3C /* ImagesViewController.swift */,
+				F43C66EE1BFDF12B0038BD3C /* ImagesCell.swift */,
+			);
+			name = ImagesScreen;
+			sourceTree = "<group>";
+		};
+		F43C66F01BFDF1AB0038BD3C /* CommentsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F43C66F11BFDF1DD0038BD3C /* CommentsViewController.swift */,
+				F43C66F31BFDF1F40038BD3C /* CommentableViewController.swift */,
+				F43C66F51BFDF20B0038BD3C /* CommentCell.swift */,
+			);
+			name = CommentsScreen;
+			sourceTree = "<group>";
+		};
+		F43C66F71BFDF22E0038BD3C /* VideosScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F43C66F81BFDF25A0038BD3C /* VideosViewController.swift */,
+				F43C66FA1BFDF26A0038BD3C /* VideoCell.swift */,
+			);
+			name = VideosScreen;
+			sourceTree = "<group>";
+		};
+		F43C66FC1BFDF2810038BD3C /* JokesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F43C66FD1BFDF2AF0038BD3C /* JokesViewController.swift */,
+				F43C66FF1BFDF2C50038BD3C /* JokeCell.swift */,
+				F43C67011BFDF2D30038BD3C /* LoadingCell.swift */,
+				F43C67031BFDF2EC0038BD3C /* AutoWidthLabel.swift */,
+			);
+			name = JokesScreen;
+			sourceTree = "<group>";
+		};
+		F43C67051BFDF3000038BD3C /* GifsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F43C67061BFDF3280038BD3C /* GifsViewController.swift */,
+				F43C67081BFDF33F0038BD3C /* GifCell.swift */,
+			);
+			name = GifsScreen;
+			sourceTree = "<group>";
+		};
+		F43C670A1BFDF3480038BD3C /* ForumScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F43C670B1BFDF36D0038BD3C /* ForumViewController.swift */,
+				F43C670D1BFDF39C0038BD3C /* ForumThreadsViewController.swift */,
+				F43C670F1BFDF3BC0038BD3C /* ForumPostCell.swift */,
+				F43C67111BFDF3CF0038BD3C /* ForumThreadCell.swift */,
+			);
+			name = ForumScreen;
+			sourceTree = "<group>";
+		};
+		F43C67131BFDF3E30038BD3C /* About */ = {
+			isa = PBXGroup;
+			children = (
+				F43C67141BFDF40A0038BD3C /* AboutViewController.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		F43C67161BFE00380038BD3C /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				F43C67171BFE00890038BD3C /* GalleryViewController.swift */,
+				F43C67191BFE00B30038BD3C /* ImageScrollView.swift */,
+				F43C671B1BFE00C50038BD3C /* GalleryLabel.swift */,
+				F43C671D1BFE00EC0038BD3C /* GalleryCell.swift */,
+				F43C671F1BFE01040038BD3C /* CommentsButton.swift */,
+			);
+			name = Gallery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,22 +548,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43C67181BFE00890038BD3C /* GalleryViewController.swift in Sources */,
+				F43C66F61BFDF20B0038BD3C /* CommentCell.swift in Sources */,
+				F43C66ED1BFDF1130038BD3C /* ImagesViewController.swift in Sources */,
+				F43C66EF1BFDF12B0038BD3C /* ImagesCell.swift in Sources */,
+				F43C66F41BFDF1F40038BD3C /* CommentableViewController.swift in Sources */,
 				F43C66DE1BFD37D90038BD3C /* ForumThreadObject.swift in Sources */,
+				F43C67091BFDF33F0038BD3C /* GifCell.swift in Sources */,
+				F43C66F21BFDF1DD0038BD3C /* CommentsViewController.swift in Sources */,
 				F43C66E81BFDD4D50038BD3C /* ForumManager.swift in Sources */,
 				F43C66E61BFDD42C0038BD3C /* GifsManager.swift in Sources */,
+				F43C66FB1BFDF26A0038BD3C /* VideoCell.swift in Sources */,
 				F43C66D41BFD23A30038BD3C /* ImageObject.swift in Sources */,
-				F403F7AD1BFCD832002B7023 /* SecondViewController.swift in Sources */,
+				F43C671E1BFE00EC0038BD3C /* GalleryCell.swift in Sources */,
 				F43C66E01BFDD1260038BD3C /* ImagesManager.swift in Sources */,
+				F43C66F91BFDF25A0038BD3C /* VideosViewController.swift in Sources */,
+				F43C67101BFDF3BC0038BD3C /* ForumPostCell.swift in Sources */,
+				F43C67151BFDF40A0038BD3C /* AboutViewController.swift in Sources */,
+				F43C671C1BFE00C50038BD3C /* GalleryLabel.swift in Sources */,
 				F43C66D81BFD29280038BD3C /* VideoObject.swift in Sources */,
+				F43C67121BFDF3CF0038BD3C /* ForumThreadCell.swift in Sources */,
 				F43C66E21BFDD2160038BD3C /* JokesManager.swift in Sources */,
 				F43C66D21BFD02820038BD3C /* CommentObject.swift in Sources */,
+				F43C66FE1BFDF2AF0038BD3C /* JokesViewController.swift in Sources */,
+				F43C67041BFDF2EC0038BD3C /* AutoWidthLabel.swift in Sources */,
 				F43C66E41BFDD38C0038BD3C /* VideosManager.swift in Sources */,
 				F43C66DC1BFD2FC00038BD3C /* ForumPostObject.swift in Sources */,
+				F43C670C1BFDF36D0038BD3C /* ForumViewController.swift in Sources */,
+				F43C67021BFDF2D30038BD3C /* LoadingCell.swift in Sources */,
 				F403F7A91BFCD832002B7023 /* AppDelegate.swift in Sources */,
-				F403F7AB1BFCD832002B7023 /* FirstViewController.swift in Sources */,
+				F43C671A1BFE00B30038BD3C /* ImageScrollView.swift in Sources */,
 				F43C66D61BFD28620038BD3C /* JokeObject.swift in Sources */,
 				F43C66D01BFD01810038BD3C /* FunnyObject.swift in Sources */,
+				F43C670E1BFDF39C0038BD3C /* ForumThreadsViewController.swift in Sources */,
 				F43C66DA1BFD2B290038BD3C /* GifObject.swift in Sources */,
+				F43C67001BFDF2C50038BD3C /* JokeCell.swift in Sources */,
+				F43C67201BFE01040038BD3C /* CommentsButton.swift in Sources */,
+				F43C67071BFDF3280038BD3C /* GifsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
