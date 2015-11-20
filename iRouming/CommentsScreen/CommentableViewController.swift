@@ -10,26 +10,99 @@ import UIKit
 
 class CommentableViewController: UIViewController {
 
+	@IBOutlet var buttonComments: CommentsButton!
+	
+	var commentsVC: CommentsViewController!
+	var commentsViewTop: NSLayoutConstraint!
+	
+	var commentsOffsetY: CGFloat = 0
+	
+	var currentObject: FunnyObject! {
+		didSet {
+			if currentObject.loadingComments {
+				self.buttonComments.setCommentCount(-1)
+			} else {
+				self.buttonComments.setCommentCount(currentObject.comments.count)
+			}
+			
+			self.commentsVC.object = currentObject
+		}
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		self.commentsOffsetY = 44
+		
+		self.commentsVC = self.storyboard!.instantiateViewControllerWithIdentifier("CommentsViewController") as! CommentsViewController
+		self.commentsVC.view.translatesAutoresizingMaskIntoConstraints = false;
+		
+		self.view.addSubview(self.commentsVC.view)
+		
+		self.commentsViewTop = NSLayoutConstraint(item: self.commentsVC.view, attribute: .Top, relatedBy: .Equal,
+												toItem: self.view, attribute: .Top, multiplier: 1, constant: self.view.frame.size.height)
+		self.view.addConstraint(self.commentsViewTop)
+		
+		var c = NSLayoutConstraint(item: self.commentsVC.view, attribute: .Bottom, relatedBy: .Equal,
+									toItem: self.view, attribute: .Bottom, multiplier: 1, constant: 0)
+		self.view.addConstraint(c)
+		
+		c = NSLayoutConstraint(item: self.commentsVC.view, attribute: .Trailing, relatedBy: .Equal,
+			toItem: self.view, attribute: .Trailing, multiplier: 1, constant: 0)
+		self.view.addConstraint(c)
+		
+		c = NSLayoutConstraint(item: self.commentsVC.view, attribute: .Leading, relatedBy: .Equal,
+			toItem: self.view, attribute: .Leading, multiplier: 1, constant: 0)
+		self.view.addConstraint(c)
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "onCommentsLoaded:", name: kCommentsLoadedNotification, object: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	deinit {
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
+	override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+		super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+		
+		if self.commentsViewTop.constant != self.topLayoutGuide.length + self.commentsOffsetY {
+			self.commentsViewTop.constant = self.view.frame.size.height
+		}
+		
+		self.view.setNeedsUpdateConstraints()
+		self.view.layoutIfNeeded()
+	}
+	
+	func onCommentsLoaded(notification: NSNotification) {
+		if self.currentObject.loadingComments {
+			self.buttonComments.setCommentCount(-1)
+		} else {
+			self.buttonComments.setCommentCount(self.currentObject.comments.count)
+		}
+	}
+	
+	func toggleComments() {
+		if(self.commentsViewTop.constant == self.topLayoutGuide.length + self.commentsOffsetY) {
+			self.commentsViewTop.constant = self.view.frame.size.height
+		}
+		else {
+			self.commentsViewTop.constant = self.topLayoutGuide.length + self.commentsOffsetY
+		}
+		
+		self.view.setNeedsUpdateConstraints()
+		UIView.animateWithDuration(0.2) { () -> Void in
+			self.view.layoutIfNeeded()
+		}
+	}
+	
+	func commentsVisible() -> Bool
+	{
+		return self.commentsViewTop.constant == self.topLayoutGuide.length + self.commentsOffsetY
+	}
+	
+	func getCurrentObject() -> FunnyObject?
+	{
+		return nil
+	}
+	
 }
