@@ -10,12 +10,20 @@ import UIKit
 
 class GalleryLabel: UILabel {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+	func setTitle(text: String) {
+		var fontSize: CGFloat = 16.0
+		let oldWidth = self.frame.size.width
+		let oldHeight = self.frame.size.height
+		self.numberOfLines = 0
+		self.text = text
+		repeat {
+			fontSize--
+			self.font = UIFont.systemFontOfSize(fontSize)
+			self.sizeToFit()
+			self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, oldWidth, self.frame.size.height)
+		} while (self.frame.size.height > oldHeight)
+		
+		self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, oldWidth, oldHeight)
+	}
 
 }

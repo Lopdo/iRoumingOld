@@ -68,8 +68,9 @@ class ImagesViewController: UITableViewController {
 		if segue.identifier == "Info" {
 
 		} else {
-			//let vc = segue.destinationViewController as! GalleryViewController
-			//vc.currentIndex = self.tableView.indexPathForSelectedRow!.row
+			let vc = segue.destinationViewController as! GalleryViewController
+			vc.currentIndex = self.tableView.indexPathForSelectedRow!.row
+			vc.imagesManager = self.imagesManager
 		}
 	}
 
