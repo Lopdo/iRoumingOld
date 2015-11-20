@@ -72,6 +72,10 @@ class CommentsViewController: UITableViewController {
 		return size.height + 36 + 1
 	}
 	
+	override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		return self.heightForBasicCellAtIndexPath(indexPath)
+	}
+	
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if let obj = self.object {
 			return obj.comments.count
