@@ -790,7 +790,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCell" id="tSM-7Z-OCV" customClass="VideoCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCell" id="tSM-7Z-OCV" customClass="VideoCell" customModule="iRouming" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.5" width="320" height="454"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -828,8 +828,8 @@
                                             <constraint firstItem="tAl-3D-2Pk" firstAttribute="leading" secondItem="tSM-7Z-OCV" secondAttribute="leading" id="fUf-CG-3H0"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="_activityIndicator" destination="tuT-Nw-GUE" id="1qn-kS-8n4"/>
-                                            <outlet property="_webView" destination="tAl-3D-2Pk" id="Ptq-WG-kYF"/>
+                                            <outlet property="activityIndicator" destination="tuT-Nw-GUE" id="wvU-Cu-Lgf"/>
+                                            <outlet property="webView" destination="tAl-3D-2Pk" id="ZLp-cI-sbe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -853,12 +853,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Videjník" image="tab_videos" id="fT9-HF-zyp"/>
                     <connections>
-                        <outlet property="_activityIndicator" destination="lgt-0P-HjU" id="QhW-Gl-7Cr"/>
-                        <outlet property="_buttonComments" destination="T0d-0v-9u3" id="1Eu-zo-0tb"/>
-                        <outlet property="_buttonRefresh" destination="dJm-x0-Z4O" id="ivk-6F-Xzv"/>
-                        <outlet property="_collectionView" destination="i0w-K6-syP" id="B7P-AW-fLv"/>
-                        <outlet property="_imageViewRating" destination="ay0-bn-Plf" id="4xg-rm-IG9"/>
-                        <outlet property="_labelTitle" destination="Rj8-8h-egl" id="Z69-rS-rnU"/>
+                        <outlet property="activityIndicator" destination="lgt-0P-HjU" id="ZGk-Xe-sur"/>
+                        <outlet property="buttonComments" destination="T0d-0v-9u3" id="bpR-7t-PLL"/>
+                        <outlet property="buttonRefresh" destination="dJm-x0-Z4O" id="Cbj-FW-8ZB"/>
+                        <outlet property="collectionView" destination="i0w-K6-syP" id="Pfh-xp-0sc"/>
+                        <outlet property="imageViewRating" destination="ay0-bn-Plf" id="Sx0-u9-mOJ"/>
+                        <outlet property="labelTitle" destination="Rj8-8h-egl" id="mL4-PH-9qe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wL6-UJ-rpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
