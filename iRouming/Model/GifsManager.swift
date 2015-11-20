@@ -15,7 +15,7 @@ class GifsManager: NSObject {
 	var gifs = [GifObject]()
 	
 	func loadVideos() {
-		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXML.php?action=gif&json=1")
+		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXMLNew.php?action=gif&json=1")
 			.responseJSON { response in
 				if let JSON = response.result.value as? [[String: AnyObject]] {
 					self.gifs.removeAll()

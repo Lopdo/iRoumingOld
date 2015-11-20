@@ -15,7 +15,7 @@ class ImagesManager: NSObject {
 	var images = [ImageObject]()
 	
 	func loadImages() {
-		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXML.php?json=1")
+		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXMLNew.php?json=1")
 			.responseJSON { response in
 				if let JSON = response.result.value as? [[String: AnyObject]] {
 					self.images.removeAll()

@@ -56,8 +56,7 @@ class FunnyObject: NSObject {
 		}
 		
 		self.loadingComments = true
-		
-		Alamofire.request(.GET, "http://www.rouming.cz/roumingXML.php?action=comments&json=1&object=" + String(self.Id))
+		Alamofire.request(.GET, "http://www.rouming.cz/roumingXMLNew.php?action=comments&json=1&object=" + String(self.Id))
 			.responseJSON { response in
 				self.loadingComments = false
 				

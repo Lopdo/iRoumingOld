@@ -24,7 +24,7 @@ class ForumManager: NSObject {
 		
 		self.loadingForum = true
 		
-		self.currentThreadRequest = Alamofire.request(.GET, "http://www.rouming.cz/roumingXML.php?action=forum&json=1")
+		self.currentThreadRequest = Alamofire.request(.GET, "http://www.rouming.cz/roumingXMLNew.php?action=forum&json=1")
 			.responseJSON { response in
 				self.loadingForum = false
 				
@@ -53,7 +53,7 @@ class ForumManager: NSObject {
 	
 		self.loadingThreads = true
 		
-		Alamofire.request(.GET, "http://www.rouming.cz/roumingXML.php?json=1&action=forumThreads")
+		Alamofire.request(.GET, "http://www.rouming.cz/roumingXMLNew.php?json=1&action=forumThreads")
 			.responseJSON { response in
 				self.loadingThreads = false
 				
@@ -82,7 +82,7 @@ class ForumManager: NSObject {
 	
 		self.loadingForum = true
 		
-		self.currentThreadRequest = Alamofire.request(.GET, "http://www.rouming.cz/roumingXML.php?json=1&action=forum&thread=" + String(threadId))
+		self.currentThreadRequest = Alamofire.request(.GET, "http://www.rouming.cz/roumingXMLNew.php?json=1&action=forum&thread=" + String(threadId))
 			.responseJSON { response in
 				self.loadingForum = false
 				

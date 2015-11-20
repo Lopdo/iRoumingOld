@@ -15,7 +15,7 @@ class VideosManager: NSObject {
 	var videos = [VideoObject]()
 	
 	func loadVideos() {
-		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXML.php?action=videos&json=1")
+		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXMLNew.php?action=videos&json=1")
 			.responseJSON { response in
 				if let JSON = response.result.value as? [[String: AnyObject]] {
 					self.videos.removeAll()

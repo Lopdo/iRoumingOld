@@ -18,7 +18,7 @@ class JokesManager: NSObject {
 	var currentJokePage: Int = 0
 	
 	func makeJokesCall() {
-		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXML.php?action=jokes&json=1&page=%i" + String(self.currentJokePage))
+		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXMLNew.php?action=jokes&json=1&page=%i" + String(self.currentJokePage))
 			.responseJSON { response in
 				if let JSON = response.result.value as? [[String: AnyObject]] {
 					if self.currentJokePage == 0 {
