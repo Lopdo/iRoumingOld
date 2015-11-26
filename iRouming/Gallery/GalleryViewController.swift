@@ -88,7 +88,9 @@ class GalleryViewController: CommentableViewController, UICollectionViewDataSour
 	override func viewWillDisappear(animated: Bool) {
 		super.viewWillDisappear(animated)
 	
-		UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+		if UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation) {
+			UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+		}
 	
 		self.navigationController!.navigationBar.alpha = 1
 	}
