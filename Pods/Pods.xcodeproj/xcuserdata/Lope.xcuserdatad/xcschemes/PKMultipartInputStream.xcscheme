@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DFF119FDFC2B25207BACD286'
+               BlueprintIdentifier = 'E8EFCF03924C58C32DDE4CE1'
                BlueprintName = 'PKMultipartInputStream'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'PKMultipartInputStream.framework'>

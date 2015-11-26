@@ -1,7 +1,4 @@
 /iRouming.xcodeproj/project.xcworkspace/xcuserdata/Lope.xcuserdatad/UserInterfaceState.xcuserstate
-/iRouming.xcodeproj/xcuserdata/Lope.xcuserdatad/xcschemes/iRouming.xcscheme
-
-/iRouming.xcodeproj/xcuserdata/Lope.xcuserdatad/xcschemes/xcschememanagement.plist
 
 .DS_Store
 
@@ -9,6 +6,4 @@
 
 Breakpoints_v2.xcbkptlist
 
-/iRouming.xcworkspace/xcuserdata/Lope.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
-
-/iRouming.xcworkspace/xcuserdata/Lope.xcuserdatad/UserInterfaceState.xcuserstate
+xcuserdata/

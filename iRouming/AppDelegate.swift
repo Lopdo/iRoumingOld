@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		var configureError:NSError?
-		GGLContext.sharedInstance().configureWithError(&configureError)
+		GAI.sharedInstance().trackerWithTrackingId("UA-23679712-8")
 		
 		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Titillium-Semibold", size: 16)!]
 		//UITabBar.appearance().selectedImageTintColor = UIColor(red: 1, green: 237.0 / 255.0, blue: 0, alpha: 1)

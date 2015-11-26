@@ -13,7 +13,7 @@ pod 'ShareKit/Twitter'
 pod 'Alamofire', '~> 3.0'
 pod 'FLAnimatedImage', '~> 1.0'
 pod 'SWRevealViewController'
-pod 'Google/Analytics'
+pod 'GoogleAnalytics'
 
 end
 
