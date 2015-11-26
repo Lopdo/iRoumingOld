@@ -39,15 +39,22 @@ class GifCell: UICollectionViewCell {
 					NSLog("Download Error:%@", error!.description)
 				}
 				if ((data) != nil) {
-					self.createGifImage(data!)
+					if self.gif!.Id == gifObject.Id {
+						self.createGifImage(data!)
+					}
 				}
 			})
 		}
 	}
 	
 	func createGifImage(gifData: NSData) {
-		animView.animatedImage = FLAnimatedImage(animatedGIFData: gifData)
-		activityIndicator.stopAnimating()
+		let img = FLAnimatedImage(animatedGIFData: gifData)
+		dispatch_async(dispatch_get_main_queue(),{
+			
+			self.animView.animatedImage = img
+			self.activityIndicator.stopAnimating()
+			
+		})
 	}
 
 }
