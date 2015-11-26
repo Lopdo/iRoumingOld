@@ -6,3 +6,5 @@
 #import <ShareKit/ShareKit.h>
 #import <ShareKit/SHKConfiguration.h>
 #import <ShareKit/DefaultSHKConfigurator.h>
+#import "FLAnimatedImageView.h"
+#import "FLAnimatedImage.h"

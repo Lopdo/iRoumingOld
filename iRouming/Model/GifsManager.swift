@@ -14,7 +14,7 @@ let kGifsLoadedNotification = "GifsLoadedNotification"
 class GifsManager: NSObject {
 	var gifs = [GifObject]()
 	
-	func loadVideos() {
+	func loadGifs() {
 		Alamofire.request(.GET, "http://kecy.roumen.cz/roumingXMLNew.php?action=gif&json=1")
 			.responseJSON { response in
 				if let JSON = response.result.value as? [[String: AnyObject]] {

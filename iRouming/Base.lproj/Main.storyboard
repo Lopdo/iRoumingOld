@@ -1275,7 +1275,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="rNp-eN-a47" customClass="GifCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCell" id="rNp-eN-a47" customClass="GifCell" customModule="iRouming" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.5" width="320" height="454"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1308,8 +1308,8 @@
                                             <constraint firstAttribute="centerY" secondItem="6oC-ji-rA9" secondAttribute="centerY" id="z1E-rd-Oaf"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="_activityIndicator" destination="6oC-ji-rA9" id="Iyi-cd-RPb"/>
-                                            <outlet property="_animView" destination="qwe-jO-Eee" id="qkY-EZ-mhR"/>
+                                            <outlet property="activityIndicator" destination="6oC-ji-rA9" id="gF1-Vw-Lbj"/>
+                                            <outlet property="animView" destination="qwe-jO-Eee" id="tPa-0w-Gdy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1333,12 +1333,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Gifník" image="tab_gifs" id="WlQ-Ya-Eat"/>
                     <connections>
-                        <outlet property="_activityIndicator" destination="Qii-Hs-gEQ" id="SPh-g5-Frv"/>
-                        <outlet property="_buttonComments" destination="XDW-Dn-Rf7" id="WoN-K0-Ba2"/>
-                        <outlet property="_buttonRefresh" destination="zi9-dj-S0D" id="c9T-Lb-UVm"/>
-                        <outlet property="_collectionView" destination="PUL-aY-Hep" id="1cv-wL-n6G"/>
-                        <outlet property="_imageViewRating" destination="FmH-sH-hp3" id="ccY-0T-aZu"/>
-                        <outlet property="_labelTitle" destination="z5K-hy-59v" id="SXL-np-HQU"/>
+                        <outlet property="activityIndicator" destination="Qii-Hs-gEQ" id="ciM-Ct-xSr"/>
+                        <outlet property="buttonComments" destination="XDW-Dn-Rf7" id="R9V-k5-xBU"/>
+                        <outlet property="buttonRefresh" destination="zi9-dj-S0D" id="Ti8-cm-lRq"/>
+                        <outlet property="collectionView" destination="PUL-aY-Hep" id="E6d-i5-y8j"/>
+                        <outlet property="imageViewRating" destination="FmH-sH-hp3" id="o5O-1v-48r"/>
+                        <outlet property="labelTitle" destination="z5K-hy-59v" id="yuT-81-yaz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGm-ZK-jqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
