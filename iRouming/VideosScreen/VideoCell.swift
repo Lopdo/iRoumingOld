@@ -35,7 +35,7 @@ class VideoCell: UICollectionViewCell, UIWebViewDelegate {
 			webView.delegate = self
 			webView.loadHTMLString(html, baseURL:NSBundle.mainBundle().resourceURL) //load it to webview
 		} catch {
-			
+
 		}
 	}
 	

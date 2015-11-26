@@ -88,21 +88,24 @@ class VideosViewController: CommentableViewController, UICollectionViewDataSourc
 	}
 	
 	// MARK: - Rotation
-	
-	override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-		super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+	override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+		super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
 		
-		self.prevIndexPath = collectionView.indexPathsForVisibleItems()[0]
-		collectionView.reloadData()
-		collectionView.hidden = true
-		collectionView.collectionViewLayout.invalidateLayout()
-	}
-	
-	override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-		super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+		if let collectionView = collectionView {
+			if collectionView.indexPathsForVisibleItems().count > 0 {
+				self.prevIndexPath = collectionView.indexPathsForVisibleItems()[0]
+				collectionView.reloadData()
+				collectionView.hidden = true
+				collectionView.collectionViewLayout.invalidateLayout()
+			}
+		}
 		
-		collectionView.scrollToItemAtIndexPath(self.prevIndexPath!, atScrollPosition: .CenteredHorizontally, animated: false)
-		collectionView.hidden = false
+		coordinator.animateAlongsideTransition(nil) { (_) -> Void in
+			if let collectionView = self.collectionView, prevIndexPath = self.prevIndexPath {
+				collectionView.scrollToItemAtIndexPath(prevIndexPath, atScrollPosition: .CenteredHorizontally, animated: false)
+				collectionView.hidden = false
+			}
+		}
 	}
 
 	func scrollViewDidScroll(scrollView: UIScrollView) {

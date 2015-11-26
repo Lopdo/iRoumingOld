@@ -62,15 +62,19 @@ class CommentableViewController: UIViewController {
 		NSNotificationCenter.defaultCenter().removeObserver(self)
 	}
 	
-	override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-		super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+	override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+		super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
 		
-		if self.commentsViewTop.constant != self.topLayoutGuide.length + self.commentsOffsetY {
-			self.commentsViewTop.constant = self.view.frame.size.height
+		coordinator.animateAlongsideTransition(nil) { (_) -> Void in
+			if let constraint = self.commentsViewTop {
+				if constraint.constant != self.topLayoutGuide.length + self.commentsOffsetY {
+					constraint.constant = self.view.frame.size.height
+				}
+			}
+			
+			self.view.setNeedsUpdateConstraints()
+			self.view.layoutIfNeeded()
 		}
-		
-		self.view.setNeedsUpdateConstraints()
-		self.view.layoutIfNeeded()
 	}
 	
 	func onCommentsLoaded(notification: NSNotification) {
