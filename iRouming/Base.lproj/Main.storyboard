@@ -435,10 +435,10 @@
             </objects>
             <point key="canvasLocation" x="1140" y="-442"/>
         </scene>
-        <!--Kecy-->
+        <!--Images-->
         <scene sceneID="heF-tu-NdV">
             <objects>
-                <navigationController definesPresentationContext="YES" id="W2M-he-mZx" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="W2M-he-mZx" userLabel="Images" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Kecy" image="tab_images" id="GLu-8x-pJF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mT9-tr-mAV">
                         <autoresizingMask key="autoresizingMask"/>
@@ -483,10 +483,10 @@
             </objects>
             <point key="canvasLocation" x="-219" y="277"/>
         </scene>
-        <!--Vtipník-->
+        <!--Jokes-->
         <scene sceneID="qkl-fs-YT2">
             <objects>
-                <navigationController hidesBarsOnSwipe="YES" id="cet-iM-vaj" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="cet-iM-vaj" userLabel="Jokes" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Vtipník" image="tab_jokes" id="6Xq-0I-6na"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Ba8-zZ-hEa">
@@ -506,10 +506,10 @@
             </objects>
             <point key="canvasLocation" x="279" y="277"/>
         </scene>
-        <!--Vtipník-->
+        <!--Jokes-->
         <scene sceneID="KxS-gJ-SJc">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Umb-z2-Se3" customClass="JokesViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="Umb-z2-Se3" userLabel="Jokes" customClass="JokesViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="YVd-8L-dFG">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -680,10 +680,10 @@
             </objects>
             <point key="canvasLocation" x="689" y="277"/>
         </scene>
-        <!--Videjník-->
+        <!--Videos-->
         <scene sceneID="Hk8-Ye-n5m">
             <objects>
-                <viewController id="Rd4-Y9-d2e" customClass="VideosViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rd4-Y9-d2e" userLabel="Videos" customClass="VideosViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xQ9-YS-B8Z"/>
                         <viewControllerLayoutGuide type="bottom" id="fa3-uN-36F"/>
@@ -1165,10 +1165,10 @@
             </objects>
             <point key="canvasLocation" x="710" y="-1819"/>
         </scene>
-        <!--Gifník-->
+        <!--Gifs-->
         <scene sceneID="VjZ-HZ-Hbm">
             <objects>
-                <viewController id="aSf-86-8Wr" customClass="GifsViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aSf-86-8Wr" userLabel="Gifs" customClass="GifsViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sef-pD-yan"/>
                         <viewControllerLayoutGuide type="bottom" id="pVg-xc-8ZT"/>
@@ -1345,10 +1345,10 @@
             </objects>
             <point key="canvasLocation" x="279" y="1004"/>
         </scene>
-        <!--Fórum-->
+        <!--Forum-->
         <scene sceneID="FNT-ka-jH4">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="2D9-Q6-P4q" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="2D9-Q6-P4q" userLabel="Forum" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zpv-mP-fHf"/>
                         <viewControllerLayoutGuide type="bottom" id="7wI-hL-eCQ"/>
@@ -1369,10 +1369,10 @@
             </objects>
             <point key="canvasLocation" x="279" y="1672"/>
         </scene>
-        <!--Fórum-->
+        <!--Forum-->
         <scene sceneID="T4D-1h-FCV">
             <objects>
-                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="rlN-PS-Gw6" customClass="ForumViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="rlN-PS-Gw6" userLabel="Forum" customClass="ForumViewController" customModule="iRouming" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="JdU-b7-QhA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

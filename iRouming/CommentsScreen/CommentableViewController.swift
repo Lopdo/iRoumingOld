@@ -74,10 +74,12 @@ class CommentableViewController: UIViewController {
 	}
 	
 	func onCommentsLoaded(notification: NSNotification) {
-		if self.currentObject.loadingComments {
-			self.buttonComments.setCommentCount(-1)
-		} else {
-			self.buttonComments.setCommentCount(self.currentObject.comments.count)
+		if let obj = self.currentObject {
+			if obj.loadingComments {
+				self.buttonComments.setCommentCount(-1)
+			} else {
+				self.buttonComments.setCommentCount(obj.comments.count)
+			}
 		}
 	}
 	
