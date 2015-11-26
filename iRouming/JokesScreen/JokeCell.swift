@@ -9,16 +9,17 @@
 import UIKit
 
 class JokeCell: UITableViewCell {
+	
+	@IBOutlet var labelName: UILabel!
+	@IBOutlet var labelText: UILabel!
+	@IBOutlet var labelCategory: UILabel!
+	@IBOutlet var imageViewRating: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+	func setJokeObject(jokeObj: JokeObject) {
+		labelName.text = jokeObj.name
+		labelCategory.text = jokeObj.category
+		labelText.text = jokeObj.text
+		
+		imageViewRating.image = UIImage(named: "icon_rating_" + String(jokeObj.rating))
+	}
 }

@@ -518,7 +518,7 @@
                         <color key="separatorColor" red="0.0" green="0.2901960784" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="JokeCell" id="frO-PG-oyo" customClass="JokeCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="JokeCell" id="frO-PG-oyo" customClass="JokeCell" customModule="iRouming" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="22" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="frO-PG-oyo" id="OG8-Sk-9of">
@@ -590,7 +590,7 @@
                                                 <constraint firstItem="CQX-Mm-mSh" firstAttribute="leading" secondItem="hMv-Dj-6N9" secondAttribute="leading" constant="10" id="xaG-Qj-YBr"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label dlas djsal daslk dsalk lsakd kasl daslk daslk daslk daslkd ask dlask dask da sad lkaksd jaskl daslk alkds" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="kqu-Ju-DHI" customClass="AutoWidthLabel">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label dlas djsal daslk dsalk lsakd kasl daslk daslk daslk daslkd ask dlask dask da sad lkaksd jaskl daslk alkds" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="kqu-Ju-DHI" customClass="AutoWidthLabel" customModule="iRouming" customModuleProvider="target">
                                             <rect key="frame" x="10" y="30" width="300" height="19.5"/>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -621,13 +621,13 @@
                                 <animations/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="_imageViewRating" destination="hCy-Ev-C2W" id="NP7-Ao-2Od"/>
-                                    <outlet property="_labelCategory" destination="26a-6f-kTP" id="KUG-UQ-L3Z"/>
-                                    <outlet property="_labelName" destination="CQX-Mm-mSh" id="lux-NC-6m4"/>
-                                    <outlet property="_labelText" destination="kqu-Ju-DHI" id="Svs-Oh-ogo"/>
+                                    <outlet property="imageViewRating" destination="hCy-Ev-C2W" id="Ind-zf-Ixt"/>
+                                    <outlet property="labelCategory" destination="26a-6f-kTP" id="HfT-PG-76c"/>
+                                    <outlet property="labelName" destination="CQX-Mm-mSh" id="EHl-Fp-3PH"/>
+                                    <outlet property="labelText" destination="kqu-Ju-DHI" id="dkQ-9t-EJq"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="LoadingCell" id="4MA-6P-DGH" customClass="LoadingCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="LoadingCell" id="4MA-6P-DGH" customClass="LoadingCell" customModule="iRouming" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4MA-6P-DGH" id="GOx-Hk-x0E">
