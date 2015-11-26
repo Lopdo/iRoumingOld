@@ -10,15 +10,13 @@ import UIKit
 
 class ForumThreadCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+	@IBOutlet var labelTitle: UILabel!
+	@IBOutlet var labelCount: UILabel!
+	
+	var thread: ForumThreadObject?
+	
+	func setThreadObject(threadObj: ForumThreadObject) {
+		self.labelTitle.text = threadObj.title
+		self.labelCount.text = String(threadObj.postsCount)
+	}
 }

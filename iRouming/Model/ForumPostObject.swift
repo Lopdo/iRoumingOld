@@ -32,7 +32,7 @@ class ForumPostObject: NSObject {
 		tmpString = tmpString.stringByReplacingOccurrencesOfString("\n", withString:"<br />")
 		
 		do {
-			self.htmlMessage = try NSAttributedString(data: tmpString.dataUsingEncoding(NSUTF8StringEncoding)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+			self.htmlMessage = try NSAttributedString(data: tmpString.dataUsingEncoding(NSUnicodeStringEncoding)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
 		} catch _ {
 			self.htmlMessage = NSAttributedString(string: "")
 		}

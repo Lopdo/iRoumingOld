@@ -1381,7 +1381,7 @@
                         <color key="separatorColor" red="0.0" green="0.2901960784" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForumPostCell" id="cs2-SV-AKl" customClass="ForumPostCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForumPostCell" id="cs2-SV-AKl" customClass="ForumPostCell" customModule="iRouming" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cs2-SV-AKl" id="cyS-pc-kf1">
@@ -1486,10 +1486,10 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="_labelAuthor" destination="F4b-gk-h9o" id="Tfb-5D-IvI"/>
-                                    <outlet property="_labelDate" destination="B44-dC-SiZ" id="U2A-x2-l8A"/>
-                                    <outlet property="_labelTitle" destination="4nA-Cf-rWr" id="ZRo-mD-Wf9"/>
-                                    <outlet property="_textViewText" destination="W9N-YC-u1P" id="T2s-nC-Y6z"/>
+                                    <outlet property="labelAuthor" destination="F4b-gk-h9o" id="1YO-09-thV"/>
+                                    <outlet property="labelDate" destination="B44-dC-SiZ" id="cwd-2d-l0U"/>
+                                    <outlet property="labelTitle" destination="4nA-Cf-rWr" id="uO4-Cb-xIv"/>
+                                    <outlet property="textViewText" destination="W9N-YC-u1P" id="HIg-F6-2QM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1546,7 +1546,7 @@
                         <color key="separatorColor" red="0.0" green="0.29019607843137252" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumThreadCell" id="FQV-ju-ytM" customClass="ForumThreadCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumThreadCell" id="FQV-ju-ytM" customClass="ForumThreadCell" customModule="iRouming" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="42" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FQV-ju-ytM" id="IA2-e5-uk2">
@@ -1588,8 +1588,8 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="_labelCount" destination="49s-DG-OYn" id="v0R-4i-4NT"/>
-                                    <outlet property="_labelTitle" destination="Glk-uB-JVF" id="ENh-CH-pZD"/>
+                                    <outlet property="labelCount" destination="49s-DG-OYn" id="3rO-tq-hgE"/>
+                                    <outlet property="labelTitle" destination="Glk-uB-JVF" id="r3T-jL-8hf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

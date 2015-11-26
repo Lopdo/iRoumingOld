@@ -10,86 +10,134 @@ import UIKit
 
 class ForumViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	var currentThreadId: UInt = 0
+	
+	@IBOutlet var revealButtonItem: UIBarButtonItem!
+	var posts: [ForumPostObject]? = nil
+	
+	var forumManager = ForumManager()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+		self.refreshControl?.addTarget(self, action: "pullDownToReloadAction", forControlEvents: .ValueChanged)
+		
+		self.tableView.setContentOffset(CGPointMake(0, self.tableView.contentOffset.y - self.refreshControl!.frame.size.height), animated: true)
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		self.refreshControl!.beginRefreshing()
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "forumPostsLoaded:", name: kForumThreadLoadedNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "onThreadChanged:", name: kForumThreadSelectedNotification, object: nil)
+		
+		let revealViewController = self.revealViewController()
+		if revealViewController != nil {
+			revealViewController.rightViewRevealWidth = 220
+			self.revealButtonItem.target = revealViewController
+			self.revealButtonItem.action = "revealToggle:"
+			self.navigationController!.navigationBar.addGestureRecognizer(revealViewController.panGestureRecognizer())
+			self.view.addGestureRecognizer(revealViewController.panGestureRecognizer())
+		}
+		
+		self.forumManager.loadForum()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+	deinit {
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		GANTracker.sharedInstance.trackView("forum")
+	}
+	
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+	static var sizingTextView: UITextView? = nil
+	func heightForRowAtIndexPath(indexPath: NSIndexPath) -> CGFloat {
+		if ForumViewController.sizingTextView == nil {
+			ForumViewController.sizingTextView = UITextView()
+			ForumViewController.sizingTextView!.font = UIFont(name: "Titillium-Thin", size: 13)
+			ForumViewController.sizingTextView!.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+		}
+		
+		if let posts = self.posts {
+			let post = posts[indexPath.row]
+			ForumViewController.sizingTextView!.text = post.message;
+			
+			let size = ForumViewController.sizingTextView!.sizeThatFits(CGSizeMake(self.view.frame.size.width - 20, CGFloat(FLT_MAX)))
+			return size.height + 36 + 1
+			
+		} else {
+			return 36
+		}
+	}
+	
+	override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		return self.heightForRowAtIndexPath(indexPath)
+	}
+	
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		if let posts = self.posts {
+			return posts.count
+		} else {
+			return 0
+		}
+	}
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCellWithIdentifier("ForumPostCell", forIndexPath: indexPath) as! ForumPostCell
+		
+		if let posts = self.posts {
+			cell.setPostObject(posts[indexPath.row])
+		}
+		
+		// Remove seperator inset
+		cell.separatorInset = UIEdgeInsetsZero
+		
+		// Prevent the cell from inheriting the Table View's margin settings
+		cell.preservesSuperviewLayoutMargins = false
+		
+		// Explictly set your cell's layout margins
+		cell.layoutMargins = UIEdgeInsetsZero
+		
+		return cell
+	}
+	
+	// MARK: - Data
+	
+	func forumPostsLoaded(notification: NSNotification) {
+		if self.currentThreadId != notification.userInfo!["threadId"] as! UInt {
+			return
+		}
+		
+		self.posts = notification.userInfo!["posts"] as? [ForumPostObject]
+		
+		self.tableView.reloadData()
+		
+		self.refreshControl!.endRefreshing()
+	}
+	
+	func pullDownToReloadAction() {
+		if self.currentThreadId == 0 {
+			self.forumManager.loadForum()
+		}
+		else {
+			self.forumManager.loadThread(self.currentThreadId)
+		}
+	}
+	
+	func onThreadChanged(notification: NSNotification) {
+		self.tableView.setContentOffset(CGPointMake(0, self.tableView.contentOffset.y - self.refreshControl!.frame.size.height), animated:true)
+		self.refreshControl!.beginRefreshing()
+		if self.posts != nil {
+			self.posts!.removeAll()
+		}
+		self.tableView.reloadData()
+	
+		self.currentThreadId = notification.userInfo!["threadId"] as! UInt
+		self.forumManager.loadThread(self.currentThreadId)
+		self.revealViewController().revealToggleAnimated(true)
+	}
 
 }
